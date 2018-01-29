@@ -1,0 +1,16 @@
+box: ubuntu
+build:
+  steps:
+    - script:
+      name: step one
+      code: echo "Step One"
+    - script:
+      name: step two
+      code: echo "Step Two"
+
+dev:
+#Any env vars starting with X_ will be passed into the container but without the starting X_
+  steps:
+    - internal/shell:
+      cmd: /bin/sh  #defaults to /bin/bash
+      code: ls

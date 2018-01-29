@@ -1,0 +1,2 @@
+To build locally:
+wercker build --docker-local
