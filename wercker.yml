@@ -3,10 +3,19 @@ build:
   steps:
     - script:
       name: step one
-      code: echo "Step One"
+      code: echo "Build Step One"
     - script:
       name: step two
-      code: echo "Step Two"
+      code: echo "Build Step Two"
+
+deploy:
+  steps:
+    - script:
+      name: step one
+      code: echo "Deploy Step One $JJ"
+    - script:
+      name: step two
+      code: echo "Deploy Step Two $JJ"
 
 dev:
 #Any env vars starting with X_ will be passed into the container but without the starting X_
@@ -14,6 +23,9 @@ dev:
     - internal/shell:
       cmd: /bin/sh  #defaults to /bin/bash
       code: ls
+
+
+
 
 # comment
 # commnet
