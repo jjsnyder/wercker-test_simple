@@ -16,6 +16,12 @@ deploy:
     - script:
       name: step two
       code: echo "Deploy Step Two $JJ"
+      
+jj:
+  steps:
+    - script:
+      name: jj step one
+      code: echo "JJ Step 1"
 
 dev:
 #Any env vars starting with X_ will be passed into the container but without the starting X_
