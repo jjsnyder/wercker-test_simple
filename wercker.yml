@@ -5,8 +5,7 @@ build:
   steps:
     - script:
         name: install curl
-        code: |
-          ls
+        code: ls 
 
    - script:
        name: step one
