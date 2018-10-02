@@ -1,52 +1,11 @@
-box: 
-  id: ubuntu
+box:
+  id: openjdk
 
 build:
   steps:
     - script:
-        name: install curl
-        code: ls 
-
-   - script:
-       name: step one
-       code: echo "Build Step One"
-
-   - script:
-       name: step two
-       code: echo "Build Step Two"
-
-  after-steps:
-    - slack-notifier:
-      url:  ProdDev-paas-fmw.slack.com
-      channel: jj-john
-      username: mybotname
-
-deploy:
-  steps:
-    - script:
-      name: step one
-      code: echo "Deploy Step One
-
-    - script:
-      name: step two
-      code: echo "Deploy Step Two"
-      
-  after-steps:
-    - slack-notifier:
-      url:  ProdDev-paas-fmw.slack.com
-      channel: jj-john
-      username: mybotname
-
-test:
-  steps:
-    - script:
-      name: jj step one
-      code: ls
-
-  after-steps:
-    - slack-notifier:
-      url:  ProdDev-paas-fmw.slack.com
-      channel: jj-john
-      username: mybotname
+        name: step 1
+        code: |
+          ls
 
 
