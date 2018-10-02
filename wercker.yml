@@ -4,14 +4,15 @@ build:
     - script:
         name: install curl
         code: |
-          apt-get update
-          apt-get install -y curl wget
+          ls
+
    - script:
-      name: step one
-      code: echo "Build Step One"
-    - script:
-      name: step two
-      code: echo "Build Step Two"
+       name: step one
+       code: echo "Build Step One"
+
+   - script:
+       name: step two
+       code: echo "Build Step Two"
 
   after-steps:
     - slack-notifier:
@@ -24,6 +25,7 @@ deploy:
     - script:
       name: step one
       code: echo "Deploy Step One
+
     - script:
       name: step two
       code: echo "Deploy Step Two"
