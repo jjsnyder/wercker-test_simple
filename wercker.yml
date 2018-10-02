@@ -6,7 +6,6 @@ build:
         code: |
           apt-get update
           apt-get install -y curl wget
-
    - script:
       name: step one
       code: echo "Build Step One"
