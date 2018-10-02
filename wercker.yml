@@ -7,5 +7,19 @@ build:
         name: step 1
         code: |
           ls
+          which curl
+
+  after-steps:
+    - slack-notifier:
+      url:  ProdDev-paas-fmw.slack.com
+      channel: jj-john
+      username: mybotname
+
+jj:
+  steps:
+    - script:
+        name: step 1
+        code: |
+          ls
 
 
