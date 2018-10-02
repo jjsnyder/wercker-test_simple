@@ -8,31 +8,37 @@ build:
       name: step two
       code: echo "Build Step Two"
 
+  after-steps:
+    - slack-notifier:
+      url:  ProdDev-paas-fmw.slack.com
+      channel: jj-john
+      username: mybotname
+
 deploy:
   steps:
     - script:
       name: step one
-      code: echo "Deploy Step One $JJ"
+      code: echo "Deploy Step One
     - script:
       name: step two
-      code: echo "Deploy Step Two $JJ"
+      code: echo "Deploy Step Two"
       
-jj:
+  after-steps:
+    - slack-notifier:
+      url:  ProdDev-paas-fmw.slack.com
+      channel: jj-john
+      username: mybotname
+
+test:
   steps:
     - script:
       name: jj step one
-      code: echo "JJ Step 1"
-
-dev:
-#Any env vars starting with X_ will be passed into the container but without the starting X_
-  steps:
-    - internal/shell:
-      cmd: /bin/sh  #defaults to /bin/bash
       code: ls
 
+  after-steps:
+    - slack-notifier:
+      url:  ProdDev-paas-fmw.slack.com
+      channel: jj-john
+      username: mybotname
 
 
-
-# comment
-# commnet
-# commnet
