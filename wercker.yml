@@ -1,4 +1,6 @@
-box: ubuntu
+box: 
+  id: ubuntu
+
 build:
   steps:
     - script:
