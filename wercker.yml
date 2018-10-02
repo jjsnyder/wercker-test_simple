@@ -15,11 +15,17 @@ build:
       channel: $SLACK_CHANNEL
       username: $SLACK_USERNAME
 
-jj:
+test_it:
   steps:
     - script:
         name: step 1
         code: |
           ls
+
+  after-steps:
+    - slack-notifier:
+      url:  $SLACK_URL
+      channel: $SLACK_CHANNEL
+      username: $SLACK_USERNAME
 
 
