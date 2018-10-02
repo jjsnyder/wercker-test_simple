@@ -11,9 +11,9 @@ build:
 
   after-steps:
     - slack-notifier:
-      url:  ProdDev-paas-fmw.slack.com
-      channel: jj-john
-      username: mybotname
+      url:  $SLACK_URL
+      channel: $SLACK_CHANNEL
+      username: $SLACK_USERNAME
 
 jj:
   steps:
