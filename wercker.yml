@@ -24,12 +24,12 @@ deploy:
       url:  $SLACK_URL
 
 
-test_it:
+ex_fail:
   steps:
     - script:
         name: step 1
         code: |
-          ls
+          asdfaf
 
   after-steps:
     - slack-notifier:
