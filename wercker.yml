@@ -22,7 +22,6 @@ deploy:
   after-steps:
     - slack-notifier:
       url:  $SLACK_URL
-      username: $SLACK_USERNAME
 
 
 test_it:
@@ -35,6 +34,5 @@ test_it:
   after-steps:
     - slack-notifier:
       url:  $SLACK_URL
-      username: $SLACK_USERNAME
 
 
